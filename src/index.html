@@ -5,9 +5,27 @@
   <meta charset="utf-8">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="imagenes/android-chrome-192x192.png"
 </head>
 
 <body>
+  <header>
+  <div id="contenedor">
+    <h1>💻 <br> Analizador de Texto</h1>
+    <ul>
+      <div id="metricas"><li class="caja fondo-celeste">Caracteres:</li></div>
+      <div id="metricas"><li class="caja fondo-celeste">Caracteres Sin Espacios:</li></div>
+      <div id="metricas"><li class="caja fondo-celeste">Palabras:</li></div>
+      <div id="metricas"><li class="caja fondo-celeste">Números:</li></div>
+      <div id="metricas"><li class="caja fondo-celeste">Suma Números:</li></div>
+      <div id="metricas"><li class="caja fondo-celeste">Promedio Longitud:</li></div>
+    </ul>
+    <textarea id="textInput"
+    placeholder="Ingrese su texto aquí..."
+    rows="3"></textarea><br>
+    <button id="limpiar">Limpiar métricas</button>
+  </div>
+</header>
   <script src="index.js" type="module"></script>
 </body>
 </html>
