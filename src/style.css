@@ -36,21 +36,10 @@ textarea {
   border-radius: 0.5em;
   background-color: rgba(255, 255, 255, 0.1);
   outline: none;
-  color: #ffffff;
+  color: #4A235A ;
   margin-top: 10px;
 }
 
-#limpiar {
-  color: #ffffff;
-  width: 100vh;
-  background-color: #BB8FCE;
-  border-radius: 0.5em;
-  position: relative;
-  padding: 1.5em 0;
-  margin-top: 1em;
-  border: none;
-  outline: none;
-}
 
 #metricas {
   border: 1px solid #BB8FCE;
@@ -68,4 +57,16 @@ textarea {
 
 ul {
   list-style: none;
+}
+
+.delete-button {
+  color: #ffffff;
+  width: 100vh;
+  background-color: #BB8FCE;
+  border-radius: 0.5em;
+  position: relative;
+  padding: 1.5em 0;
+  margin-top: 1em;
+  border: none;
+  outline: none;
 }
