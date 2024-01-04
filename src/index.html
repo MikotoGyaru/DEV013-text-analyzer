@@ -9,22 +9,27 @@
 </head>
 
 <body>
-  <header>
   <div id="contenedor">
+  <header>
     <h1>💻 <br> Analizador de Texto</h1>
+  </header>
     <ul>
-      <div id="metricas"><li class="analyzer">Caracteres:</li></div>
-      <div id="metricas"><li class="analyzer">Caracteres Sin Espacios:</li></div>
-      <div id="metricas"><li class="analyzer">Palabras:</li></div>
-      <div id="metricas"><li class="analyzer">Números:</li></div>
-      <div id="metricas"><li class="analyzer">Suma Números:</li></div>
-      <div id="metricas"><li class="analyzer">Promedio Longitud:</li></div>
+      <div class="metricas"><li class="analyzer" data-testid="word-count">Caracteres:</li></div>
+      <div class="metricas"><li class="analyzer" data-testid="character-count">Caracteres Sin Espacios:</li></div>
+      <div class="metricas"><li class="analyzer" data-testid="character-no-spaces-count">Palabras:</li></div>
+      <div class="metricas"><li class="analyzer" data-testid="number-count">Números:</li></div>
+      <div class="metricas"><li class="analyzer" data-testid="number-sum">Suma Números:</li></div>
+      <div class="metricas"><li class="analyzer" data-testid="word-length-average">Promedio Longitud:</li></div>
     </ul>
-    <div id="areadetexto"><textarea id="element-to-remove"
-    placeholder="Ingrese su texto aquí..."
-    rows="3"></textarea><br></div>
+    <div id="areadetexto">
+      <textarea name="user-input" placeholder="Ingrese su texto aquí..." rows="3"></textarea><br>
+    </div>
+    <button id="reset-button">Limpiar métricas</button>
   </div>
-</header>
+  <footer>
+    <p> Autora: Cataline Alarcón</p>
+  </footer>
   <script src="index.js" type="module"></script>
+  <script src ="analyzer.js" type="module"></script>
 </body>
 </html>
