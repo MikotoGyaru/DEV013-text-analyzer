@@ -32,7 +32,7 @@ enviadas como _input_ por ella. Esto se logra utilizando HTML, CSS y JavaScript.
 
 ## 4. Prototipo
 
-<img src = prototipo.jpg>
+<img src = "prototipo.jpg">
 
 ## 5. Funcionalidades
 
