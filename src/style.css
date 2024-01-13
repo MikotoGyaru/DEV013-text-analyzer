@@ -17,11 +17,12 @@ body {
 }
 
 #contenedor {
-background-color: #D7BDE2;
-border-radius: 0.5em;
-padding: 4em 2em;
-overflow: hidden;
-}
+  background-color: #D7BDE2;
+  border-radius: 0.5em;
+  padding: 4em 2em;
+  overflow: hidden;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  }
 
 h1 {
   font-size: 3rem;
@@ -31,7 +32,6 @@ h1 {
   margin-bottom: 1em;
   font-family: 'Lobster', sans-serif;
   text-shadow: 2px 2px 4px #633974;
-
 }
 
 textarea {
@@ -45,6 +45,7 @@ textarea {
   color: #4A235A ;
   margin-top: 10px;
   font-weight: 500;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .metricas {
@@ -59,8 +60,8 @@ textarea {
   box-sizing: content-box;
   font-weight: 500;
   display: inline-block;
-  flex-wrap: wrap;
   color: #271031;
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, .2);;
 }
 
 ul {
@@ -77,6 +78,7 @@ ul {
   margin-top: 1em;
   border: none;
   outline: none;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
 }
 
 footer {
@@ -88,9 +90,3 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-/*.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-

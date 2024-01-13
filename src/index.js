@@ -2,11 +2,11 @@ import analyzer from './analyzer.js';
 //let deleteButton=document.createElement("button");
 //deleteButton.textContent="Limpiar métricas";
 //deleteButton.classList.add("delete-button");
-let deleteButton=document.getElementById("reset-button")
+const deleteButton=document.getElementById("reset-button")
 deleteButton.addEventListener("click",function() {
-    let textareaDocument=document.getElementsByName("user-input")[0];
+    const textareaDocument=document.getElementsByName("user-input")[0];
     textareaDocument.value="";
-    const clase = document.querySelectorAll(".analyzer");
+    const clase = document.querySelectorAll(".metricas");
           console.log(clase);
           const liWordCount = (clase[0]);
           liWordCount.innerHTML = "Palabras: "
@@ -29,22 +29,23 @@ deleteButton.addEventListener("click",function() {
     let userInput = document.getElementsByName("user-input")[0];
     userInput.addEventListener("input", function() {
           // Este código se ejecutará cada vez que el contenido del input cambie
-          let textoIngresado = userInput.value;
+          const textoIngresado = userInput.value;
           console.log("Texto ingresado:", textoIngresado);
-          let wordCount=analyzer.getWordCount(textoIngresado);
+          const wordCount=analyzer.getWordCount(textoIngresado);
           console.log("cantidad-de-palabras: " + wordCount);
-          let characterCount=analyzer.getCharacterCount(textoIngresado);
+          const characterCount=analyzer.getCharacterCount(textoIngresado);
           console.log("cantidad-de-caracteres: " + characterCount);
-          let characterCountExcludingSpaces=analyzer.getCharacterCountExcludingSpaces(textoIngresado);
+          const characterCountExcludingSpaces=analyzer.getCharacterCountExcludingSpaces(textoIngresado);
           console.log("cantidad-de-caracteres-sin-espacio: "+characterCountExcludingSpaces);
-          let averageWordLength=analyzer.getAverageWordLength(textoIngresado);
+          const averageWordLength=analyzer.getAverageWordLength(textoIngresado);
           console.log("longitud-promedio-de-palabras: "+averageWordLength);
-          let numberCount=analyzer.getNumberCount(textoIngresado);
+          const numberCount=analyzer.getNumberCount(textoIngresado);
           console.log("cantidad-de-números: "+numberCount);
-          let numberSum=analyzer.getNumberSum(textoIngresado);
+          const numberSum=analyzer.getNumberSum(textoIngresado);
           console.log("suma-números: "+numberSum);
 
-          const clase = document.querySelectorAll(".analyzer");
+          const clase = document.querySelectorAll(".metricas");
+          const divNumberSum = document.querySelector(".numberSum");
           console.log(clase);
           const liWordCount = (clase[0]);
           liWordCount.innerHTML = "Palabras: "+wordCount
@@ -56,7 +57,7 @@ deleteButton.addEventListener("click",function() {
           liAverageWordLength.innerHTML = "Promedio Longitud: "+averageWordLength
           const liNumberCount = (clase[4]);
           liNumberCount.innerHTML = "Números: "+numberCount
-          const liNumberSum = (clase[5]);
+          const liNumberSum = (divNumberSum);
           liNumberSum.innerHTML = "Suma Números: "+numberSum
         });
         

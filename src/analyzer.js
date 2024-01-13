@@ -1,8 +1,27 @@
 const analyzer = {  
   getWordCount: (text) => {
-    const words = text.split(/\s+/);
-    return words.length;
+    //const words = text.split(/\s+/);
+   // return words.length;
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    const words = text.split(" ");
+    let wordCount = 0;
+    for (let i = 0; i < words.length; i++){
+      const word = words[i];
+    let hasLetters = false;
+
+    for (let t = 0; t < word.length; t++) {
+      const character = word[t].toLowerCase();
+
+    if (character >= "a" && character <= "z") {
+      hasLetters = true;
+      break;
+    }
+    }
+    if (hasLetters) {
+      wordCount++;
+    }
+    }
+    return wordCount;
   },
   getCharacterCount: (text) => {
     return text.length;
@@ -28,22 +47,44 @@ const analyzer = {
     //return numbers ? numbers.length : 0;
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     let numberCount = 0;
+    let currentNumber = "";
     for (let i = 0; i < text.length; i++) {
       const character = text[i];
-      if (!isNaN(Number(character)) && character.trim() !== '') {
-        numberCount++;
-      //if (isNumber(character)) {
-        //numberCount++;
+      if (!isNaN(parseInt(character)) || (character >= 'a' && character <= 'z')) {
+        currentNumber += character;
+      } else {
+        if (currentNumber !== "") {
+          numberCount++;
+          currentNumber = "";
+        }
       }
+    }
+    if (currentNumber !== "") {
+      numberCount++;
     }
     return numberCount;
   },
   getNumberSum: (text) => {
-    const numbers=text.match(/\d+/g);
-    return numbers ? numbers.reduce((acc,num) => acc+parseInt(num), 0):0;
+    //const numbers=text.match(/\d+/g);
+    //return numbers ? numbers.reduce((acc,num) => acc+parseInt(num), 0):0;
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    //Primero debe reconocer los números ingresados en el cuadro de texto
-    //
+    let currentNumber = '';
+    let sum = 0;
+    for (let i = 0; i < text.length; i++) {
+      const character = text[i];
+      if (!isNaN(parseInt(character))) {
+        currentNumber += character;
+      } else {
+        if (currentNumber !== '') {
+          sum += parseInt(currentNumber);
+          currentNumber = '';
+        }
+      }
+    }
+    if (currentNumber !== '') {
+      sum += parseInt(currentNumber);
+    }
+    return sum;
   },
 };
 
