@@ -32,11 +32,12 @@ enviadas como _input_ por ella. Esto se logra utilizando HTML, CSS y JavaScript.
 
 ## 4. Prototipo
 
-<img src ="prototipo.jpg">
+![WhatsApp Image 2024-01-13 at 01 58 59_9934d58c](https://github.com/MikotoGyaru/DEV013-text-analyzer/assets/153212220/6284e984-7821-404d-ad60-7332c948138c)
+
 
 ## 5. Funcionalidades
 
-<img src ="funcionalidad.png">
+![imagen_2024-01-13_022832354](https://github.com/MikotoGyaru/DEV013-text-analyzer/assets/153212220/44eb57f2-a92c-4027-a835-755945c51763)
 
 El listado de funcionalidades es el siguiente:
 
