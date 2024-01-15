@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
 <head>
   <meta charset="utf-8">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="imagenes/android-chrome-192x192.png">
 </head>
 
 <body>
+  <div id="contenedor">
+  <header>
+    <h1>💻 <br> Analizador de Texto</h1>
+  </header>
+  <div class="contenedor-metricas">
+    <ul>
+      <div class="metricas"><li class="" data-testid="word-count">Palabras:</li></div>
+      <div class="metricas"><li class="" data-testid="character-count">Caracteres:</li></div>
+      <div class="metricas"><li class="" data-testid="character-no-spaces-count">Caracteres Sin Espacios:</li></div>
+      <div class="metricas"><li class="" data-testid="word-length-average">Promedio Longitud:</li></div>
+      <div class="metricas"><li class="" data-testid="number-count">Números:</li></div>
+      <div class="metricas numberSum"><li class="" data-testid="number-sum">Suma Números:</li></div>
+    </ul>
+  </div>
+    <div id="areadetexto">
+      <textarea name="user-input" placeholder="Ingrese su texto aquí..." rows="3"></textarea><br>
+    </div>
+    <button id="reset-button">Limpiar métricas</button>
+  </div>
+  <footer>
+    <p> Autora: Cataline Alarcón 🌷</p>
+  </footer>
   <script src="index.js" type="module"></script>
+  <script src ="analyzer.js" type="module"></script>
 </body>
 </html>
