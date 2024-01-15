@@ -58,3 +58,5 @@ El listado de funcionalidades es el siguiente:
     longitud media de las palabras en el texto de entrada y se las muestra a la usuaria.
 
 3. La aplicación permite limpiar el contenido de la caja de texto haciendo click en un botón.
+
+Link a la página: https://mikotogyaru.github.io/DEV013-text-analyzer/
