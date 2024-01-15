@@ -50,7 +50,7 @@ const analyzer = {
     let currentNumber = "";
     for (let i = 0; i < text.length; i++) {
       const character = text[i];
-      if (!isNaN(parseInt(character)) || (character >= 'a' && character <= 'z')) {
+      if (!isNaN(parseInt(character)) && !(/[a-zA-Z]/).test(character)) {
         currentNumber += character;
       } else {
         if (currentNumber !== "") {
